@@ -1,3 +1,5 @@
+// AccountTest.java
+
 package be.ecam.basics.exercises;
 
 import org.junit.jupiter.api.Test;
@@ -16,6 +18,7 @@ class AccountTest {
         assertEquals(0.20, a.getBalance(), 0.0);
     }
 
+    
     @Test
     void transferShouldPreserveTotal() {
         Account a = new Account(1.00);
