@@ -1,3 +1,5 @@
+// InventoryTest.java
+
 package be.ecam.basics.exercises;
 
 import org.junit.jupiter.api.Test;
@@ -11,6 +13,8 @@ class InventoryTest {
 
     @Test
     void findsSkuByValueEquality() {
+        // Using 'new String("BBB")' creates a different object reference.
+        // Should still match by VALUE, not reference.
         List<Inventory.Item> items = Arrays.asList(
                 new Inventory.Item("AAA"),
                 new Inventory.Item("BBB"),
