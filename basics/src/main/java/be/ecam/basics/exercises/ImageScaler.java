@@ -1,7 +1,7 @@
 // ImageScaler.java
 package be.ecam.basics.exercises;
 
-// Initial Problem :
+// Initial Problem (Pitfall: integer division truncation):
     //           --> Integer division truncates (5/2 = 2 instead of 2.5).
     // Solution :
     //      Use integer rounding trick: (value * num + den/2) / den

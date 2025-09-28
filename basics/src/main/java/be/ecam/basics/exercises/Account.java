@@ -5,6 +5,14 @@ package be.ecam.basics.exercises;
 import java.util.Objects;
 import java.math.BigDecimal;
 
+
+// Initial Problem (Pitfall: floating-point precision - IEEE 754)):
+//           --> Using double for money operations caused rounding errors (e.g. 0.1 + 0.2 != 0.3).
+// Solution :
+//      Use BigDecimal instead of double to ensure exact decimal arithmetic.
+
+
+
 //--------BigDecimal-----
 
 //   .ZERO             :  The value 0, with a scale of 0.

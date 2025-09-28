@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-// Initial Problem :
+// Initial Problem (Pitfall: Pitfall: checked exceptions enforcement and Exception handling):
     //           -> catch block just returns null(Swallowing IOException)
     //           --> test expects missing files to propagate an IOException, not return null
     //           ---> 

@@ -6,8 +6,8 @@ import java.util.List;
 
 import java.util.ArrayList;
 
-// Initial Problem :
-//           -->  null handling in collections (tags).
+// Initial Problem Pitfall: null handling and NullPointerException):
+//           --> null handling in collections (tags).
 // Solution :
 //      Fix the constructor: normalize tags as an ArrayList        
 
