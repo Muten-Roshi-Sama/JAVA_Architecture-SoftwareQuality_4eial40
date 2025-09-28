@@ -1,3 +1,4 @@
+// FileLoader.java
 package be.ecam.basics.exercises;
 
 import java.io.BufferedReader;
@@ -6,18 +7,21 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+// Initial Problem :
+    //           -> catch block just returns null(Swallowing IOException)
+    //           --> test expects missing files to propagate an IOException, not return null
+    //           ---> 
+    // Solution :
+    //      Use try-with-resources and let IOException propagate.
+
+
+
 public class FileLoader {
-    public static String firstLine(Path path) {
-        BufferedReader br = null;
-        try {
-            br = Files.newBufferedReader(path, StandardCharsets.UTF_8);
+
+    public static String firstLine(Path path) throws IOException {
+        try (BufferedReader br = Files.newBufferedReader(path, StandardCharsets.UTF_8)){
             return br.readLine();
-        } catch (IOException e) {
-            return null;
-        } finally {
-            if (br != null) {
-                try { br.close(); } catch (IOException ignored) { }
-            }
         }
     }
 }
+
